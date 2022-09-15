@@ -7,18 +7,18 @@
 // ["Russia", "Denmark", "Kazan"] -> []
 
 Console.Clear();
-int count = 0;
-int j = 0;
+int size = 0;
+int index = 0;
 string[] array1 = {"hе11о", "2", "world", ":-)"};
-string[] array2 = new string[count];
+string[] array2 = new string[size];
 for (int i = 0; i < array1.Length; i++)
 {
     if (array1[i].Length <= 3)
     {
-        count++;
-        Array.Resize(ref array2, count);
-        array2[j] = array1[i];
-        j++;
+        size++;
+        Array.Resize(ref array2, size);
+        array2[index] = array1[i];
+        index++;
     }
 }
 Console.WriteLine($"[{string.Join(", ", array1)}] -> [{string.Join(", ", array2)}]");
